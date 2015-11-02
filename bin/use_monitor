@@ -1,0 +1,9 @@
+#! /bin/sh
+
+XRANDR="/usr/bin/xrandr"
+LAPTOP_OUTPUT="LVDS1"
+MONITOR_OUTPUT="HDMI1"
+
+${XRANDR} --output ${MONITOR_OUTPUT} --mode 1920x1080 \
+            --output ${LAPTOP_OUTPUT} --off
+

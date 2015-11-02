@@ -1,0 +1,79 @@
+general {
+#    output_format = "dzen2"
+    colors = true
+    color_good = "#eeeeee"
+    color_degraded = "#eeeeee"
+#    color_degraded = "#FF8000"
+    color_bad = "#666666"
+    interval = 30
+}
+
+order += "run_watch DHCP"
+order += "run_watch VPN"
+order += "ethernet eth0"
+order += "wireless wlan0"
+order += "disk /home"
+order += "volume master"
+order += "battery 1"
+order += "time"
+
+
+
+wireless wlan0 {
+    format_up = "WiFi: ENABLED [%essid]"
+    format_down = "WiFi: DISABLED"
+}
+
+ethernet eth0 {
+    # sudo setcap cap_net_admin=ep $(which i3status)
+    format_up = "Eth: ENABLED"
+    format_down = "Eth: DISABLED"
+}
+
+battery 1 {
+    format = "%status %percentage"
+    format_down = "No battery"
+    integer_battery_capacity = true
+    last_full_capacity = true
+    low_threshold = 10
+    threshold_type = time
+    status_full = ""
+    status_bat = ""
+    status_chr = ""
+    path = "/sys/class/power_supply/BAT%d/uevent"
+}
+
+run_watch DHCP {
+    pidfile = "/var/run/dhc*.pid"
+#    format_up = "DHCP: ENABLED"
+#    format_down = "DHCP: DISABLED"
+}
+
+run_watch VPN {
+    pidfile = "/var/run/openvpn.pid"
+#    format_up = "VPN: ENABLED"
+#    format_down = "VPN: DISABLED"
+}
+
+time {
+    format = "  %d.%m.%Y %H:%M"
+}
+
+load {
+    format = "%1min"
+}
+
+disk "/" {
+    format = "/ %free"
+}
+
+disk "/home" {
+    format = "  /home %free"
+}
+
+volume master {
+    format = "♪: %volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}

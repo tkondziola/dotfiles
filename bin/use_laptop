@@ -1,0 +1,9 @@
+#! /bin/sh
+
+XRANDR="/usr/bin/xrandr"
+LAPTOP_OUTPUT="LVDS1"
+MONITOR_OUTPUT="HDMI1"
+
+${XRANDR} --output ${LAPTOP_OUTPUT} --auto --primary\
+            --output ${MONITOR_OUTPUT} --off
+

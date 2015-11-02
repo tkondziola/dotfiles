@@ -1,0 +1,6 @@
+#! /bin/sh
+
+XRANDR="/usr/bin/xrandr"
+PROJECTOR_OUTPUT="VGA1"
+
+${XRANDR} --output ${PROJECTOR_OUTPUT} --auto --same-as eDP1
