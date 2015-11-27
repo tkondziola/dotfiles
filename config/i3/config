@@ -15,7 +15,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 #font pango:DejaVu Sans Bold 8
-font xft:FontAwesome 9
+font pango:FontAwesome 8
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
