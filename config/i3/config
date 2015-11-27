@@ -53,6 +53,7 @@ exec --no-startup-id "/usr/local/bin/compton -b"
 exec --no-startup-id "/usr/local/bin/dunst -c /home/${USER}/dotfiles/config/dunst/dunstrc"
 exec --no-startup-id "/usr/bin/start-pulseaudio-x11"
 exec --no-startup-id "/usr/bin/nm-applet"
+#exec --no-startup-id "/home/toko/dotfiles/scripts/locker"
 
 #
 # BINDINGS
@@ -112,6 +113,12 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# change laptop to monitor
+bindsym $mod+m exec xrandr --output HDMI1 --mode 1920x1080 --primary --output LVDS1 --off
+
+# change monitor to laptop
+bindsym $mod+Shift+m exec xrandr --output LVDS1 --auto --primary --output HDMI1 --off
+
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -148,7 +155,6 @@ bindsym $mod+Shift+r restart
 
 # lock desktop
 bindsym $mod+Ctrl+l exec --no-startup-id /usr/local/bin/sflock -f "-*-terminus-*-*-*-*-14-*-*-*-*-*-*-*" -b 60 -c "#"
-#bindsym $mod+Ctrl+l exec --no-startup-id "scrot /tmp/img.png && mogrify -scale 10% -scale 1000% /tmp/img.png && i3lock -i /tmp/img.png"
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -f pango:'FontAwesome 9' -t warning -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
