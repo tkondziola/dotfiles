@@ -1,0 +1,6 @@
+#
+# Project NOK01A settings
+# 
+default rule "[NMAA]"           --> bold red line
+default rule "[ProxyHelper]"    --> yellow line
+default rule /Commute/          --> underline green
