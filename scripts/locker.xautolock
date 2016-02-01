@@ -1,0 +1,11 @@
+#! /bin/sh
+
+XAUTOLOCK="/usr/bin/xautolock"
+LOCKER="/usr/local/bin/sflock"
+
+${XAUTOLOCK} -time 3       \
+             -locker "${LOCKER} -b 60 -c '#'"    \
+             -notify 10    \
+             -notifier "notify-send -u critical 'LOCKING screen in 10 sec.'" \
+             -detectsleep
+
