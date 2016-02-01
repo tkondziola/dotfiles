@@ -22,14 +22,14 @@ font pango:FontAwesome 8
 floating_modifier $mod
 
 # class                 border  backgr. text    indicator
-client.focused          #eeeeee #eeeeee #666666 #aaaaaa
-client.focused_inactive #333333 #5f676a #666666 #484e50
+client.focused          #ffffff #ffffff #000000 #aaaaaa
+client.focused_inactive #333333 #5f676a #000000 #484e50
 client.unfocused        #333333 #222222 #666666 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000
 
 
-new_window pixel 4
+new_window pixel 2
 # Set inner/outer gaps
 gaps inner 10
 gaps outer 5
@@ -41,18 +41,8 @@ gaps outer 5
 
 # For NOK01A
 for_window [title="^Silverstone"]   floating enable
-for_window [title="^MainWindow"]    floating enable
-
-#
-# EXECS
-#
-exec --no-startup-id "/usr/bin/xsetroot -cursor_name left_ptr"
-exec --no-startup-id "/usr/local/bin/unclutter"
-exec --no-startup-id "/usr/bin/hsetroot -solid '#1b1c1e'"
-exec --no-startup-id "/usr/local/bin/compton -b"
-exec --no-startup-id "/usr/local/bin/dunst -c /home/${USER}/dotfiles/config/dunst/dunstrc"
-exec --no-startup-id "/usr/bin/start-pulseaudio-x11"
-exec --no-startup-id "/usr/bin/nm-applet"
+for_window [title="zathura"]        floating enable
+for_window [title="mplayer"]        floating enable
 
 #
 # BINDINGS

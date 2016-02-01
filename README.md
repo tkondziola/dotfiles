@@ -29,3 +29,5 @@ Minimal X configuration
 27. unclutter
 28. udiskie
 29. pmount
+30. taskwarrior
+31. clog

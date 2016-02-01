@@ -1,2 +1,27 @@
 shell -
+d
+delete 
+move 
+move
+shell 
+so
+help
+search systemd
+search peer
+shell %s
 delete
+touch 
+sort 
+sort *.pdf
+
+sort
+sort mdate reverse
+sort mdate
+sort name
+sort mtime reverse
+sort_reverse
+sort mtime
+sort title
+set sort_reverse true
+search 
+filter *.pdf

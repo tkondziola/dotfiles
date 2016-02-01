@@ -1,5 +1,5 @@
 [skin]
-    description=darkcourses green by bohoomil
+    description=blackyellow tk
 
 [Lines]
     horiz=─
@@ -26,17 +26,17 @@
 
 [core]
     _default_=gray;default
-    selected=black;green
-    marked=default;red
-    markselect=default;magenta
+    selected=black;gray
+    marked=yellow;black
+    markselect=default;red
     gauge=black;lightgray
     input=default;black
-    inputunchanged=black;green
+    inputunchanged=black;yellow
     inputmark=cyan;black
     disabled=gray;black
     reverse=brightgreen;default
     commandlinemark=black;lightgray
-    header=green;black
+    header=yellow;black
     inputhistory=blue;default
     commandhistory=cyan;default
 
@@ -45,7 +45,7 @@
     dfocus=white;green
     dhotnormal=blue;black
     dhotfocus=black;green
-    dtitle=green;black
+    dtitle=yellow;black
 
 [error]
     _default_=white;red
@@ -82,17 +82,17 @@
 
 [menu]
     _default_=lightgray;black
-    menuhot=blue;black
-    menusel=black;green
-    menuhotsel=black;green
+    menuhot=yellow;black
+    menusel=white;grey
+    menuhotsel=black;yellow
     menuinactive=lightgray;black
 
 [buttonbar]
-    hotkey=black;green
-    button=lightgray;black
+    hotkey=yellow;black
+    button=gray;black
 
 [statusbar]
-    _default_=green;black
+    _default_=yellow;black
 
 [help]
     _default_=default;default
@@ -110,7 +110,7 @@
     editlinestate=brightcyan
     editrightmargin=brightblue
     bookmark=red
-    bookmarkfound=black;green
+    bookmarkfound=black;yellow
 
 [diffviewer]
     added=brightgreen;default
@@ -128,8 +128,8 @@
 
 [popupmenu]
     _default_=lightgray;black
-    menusel=black;green
-    menutitle=green;black
+    menusel=black;yellow
+    menutitle=yellow;black
 
 [widget-common]
     sort-sign-down=↑

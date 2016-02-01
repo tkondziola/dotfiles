@@ -6,3 +6,16 @@
     local  = cyan
 [http]
 	sslverify = false
+[user]
+	name = Tomasz Kondziola
+	email = ext-tomasz.1.kondziola@here.com
+[core]
+	autocrlf = input
+[review "gerrit.it.here.com"]
+	username = tkondzio
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[credential]
+	helper = store
