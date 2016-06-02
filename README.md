@@ -31,3 +31,4 @@ Minimal X configuration
 29. pmount
 30. taskwarrior
 31. clog
+32. snownews
